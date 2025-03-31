@@ -1,10 +1,12 @@
 <?php
 require "database.php";
+require "functions.php";
 
-$description = $_POST['description'];
+$description = post("description");
+
 $data = [null, $description, 0];
 $pdo->prepare("INSERT INTO tasks VALUES (?,?,?)")->execute($data);
 
-header("Location: index.php");
+redirect("index.php");
 
 ?>
