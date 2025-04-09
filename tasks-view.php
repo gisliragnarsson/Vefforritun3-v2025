@@ -2,7 +2,7 @@
 
     <h1>Tasks</h1>
 
-    <form action="save-task.php" method="post">
+    <form action="/tasks/save" method="post">
         <div>
             <label for="description">Description</label>
             <input type="text" id="description" name="description">

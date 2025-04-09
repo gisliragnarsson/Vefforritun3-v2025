@@ -7,6 +7,6 @@ $description = post("description");
 $data = [null, $description, 0];
 $pdo->prepare("INSERT INTO tasks VALUES (?,?,?)")->execute($data);
 
-redirect("index.php");
+redirect("/tasks");
 
 ?>

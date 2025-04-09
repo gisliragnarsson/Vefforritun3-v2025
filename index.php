@@ -1,11 +1,13 @@
 <?php 
 
-require "database.php";
+$url = parse_url( $_SERVER["REQUEST_URI"], PHP_URL_PATH );
 
-$query = $pdo->query("SELECT * FROM tasks");
-$tasks = $query->fetchAll();
+if ($url == "/tasks") {
+    require "tasks.php";
+}
+else if ($url == "/tasks/save") {
+    require "save-task.php";
+}
 
-require "index-view.php";
 ?>
-
  
