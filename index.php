@@ -1,12 +1,16 @@
 <?php 
+// php -S localhost:8000
 
 $url = parse_url( $_SERVER["REQUEST_URI"], PHP_URL_PATH );
 
 if ($url == "/tasks") {
-    require "tasks.php";
+    require "controllers/tasks.php";
 }
 else if ($url == "/tasks/save") {
-    require "save-task.php";
+    require "controllers/save-task.php";
+}
+else if ($url == "/home") {
+    require "controllers/home.php";
 }
 
 ?>
