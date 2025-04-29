@@ -12,7 +12,7 @@
     </form>
 
     <?php foreach($tasks as $task): ?>
-        <p>
+        <a href="/tasks/details?task_id=<?php echo $task["id"]; ?>">
             <?php echo $task["description"]; ?>
         </p>    
     <?php endforeach; ?>
